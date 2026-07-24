@@ -1,0 +1,80 @@
+﻿DML (Data Manipulation Language – INSERT, UPDATE, DELETE)
+1. Write a query to insert a new record into the EMPLOYEE table.
+Ans: insert into EMPLOYEE table values(data)
+
+
+2. Write a query to insert values into only selected columns of the EMPLOYEE table.
+Ans: insert into EMPLOYEE table (column_name) values(data)
+
+
+
+3. Write a query to update the salary of an employee whose emp_id = 105.
+Ans: update EMPLOYEE_table set salary=value where  emp_id = 105
+
+
+4. Write a query to update the department of all employees to HR.
+Ans: update EMPLOYEE_table set department of all employees=HR
+
+
+
+5. Write a query to delete a record from the EMPLOYEE table whose emp_id = 110.
+Ans: delete from EMPLOYEE_table, where emp_id = 110
+
+
+   6. Write a query to delete all records from the EMPLOYEE table.
+Ans: delete from EMPLOYEE_table
+
+
+
+   7. Write a query to increase the salary of all employees by 5,000.
+Ans: update EMPLOYEE_table set salary=+5000
+
+
+
+
+DQL (SELECT)
+   1. Write a query to display all records from the EMPLOYEE table.
+Ans: Select*from EMPLOYEE_table
+
+
+
+   2. Write a query to display only emp_id and emp_name from the EMPLOYEE table.
+Ans: Select (emp_id,emp_name) from EMPLOYEE_table
+
+
+
+   3. Write a query to display emp_name and salary from the EMPLOYEE table.
+Ans:Select emp_name ,salary from EMPLOYEE_table
+
+
+
+   4. Write a query to display the department column from the EMPLOYEE table.
+Ans: Select department column from EMPLOYEE_table
+
+
+
+   5. Write a query to display all employee names.
+Ans: Select employee names from EMPLOYEE_table
+
+
+   6. Write a query to display all employee salaries.
+Ans: Select employee salaries from EMPLOYEE_table
+
+
+   7. Write a query to display emp_id, department, and salary from the EMPLOYEE table.
+Ans: Select emp_id, department, salary from EMPLOYEE_table
+
+
+
+   8. Write a query to display all columns from the EMPLOYEE table.
+Ans: Select * from EMPLOYEE_table
+
+
+
+   9. Write a query to display employee name and department only.
+Ans: Select (employee name,department) from EMPLOYEE_table
+
+
+
+   10. Write a query to display emp_id and salary from the EMPLOYEE table.
+Ans: Select emp_id , salary from EMPLOYEE_table
