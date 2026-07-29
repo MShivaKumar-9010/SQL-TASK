@@ -1,0 +1,120 @@
+﻿INNER JOIN
+1. Write a query to display employee name and department name.
+select employs.id,employs.name,departments.name from employs inner join departments on employs.id = departments.id;
+2. Write a query to list employees working on projects.
+select employs.id,employs.name,projects.name from employs inner join projects on employs.id=projects.id;
+3. Write a query to find employees who are assigned to a department.
+select * from employs inner join departments on employs.id=departments.id where departments.name != "null";
+4. Display employee name and project name using INNER JOIN.
+ select employs.id,employs.name,projects.name from employs inner join projects on employs.id=projects.id;
+
+
+LEFT JOIN 
+5. Write a query to display all employees, including those without a department.
+select employs.id,employs.name,departments.name from employs left join departments on employs.id=departments.id;
+6. Display all employees and their projects, including employees with no projects.
+ select employs.id,employs.name,projects.name from employs left join projects on employs.id=projects.id;
+7. Write a query to show employee name and department name, even if the department is NULL.
+select employs.id,employs.name,departments.name from employs left join departments on employs.id=departments.id;
+
+
+
+
+
+RIGHT JOIN 
+8. Write a query to display all departments, even if no employees work in them.
+select employs.id,employs.name,departments.name from employs right join departments on employs.id=departments.id;
+
+
+9. Display all projects, including those not assigned to any employee.
+ select employs.id,employs.name,projects.name from employs right join projects on employs.id=projects.id;
+FULL JOIN (Using UNION)
+10. Write a query to display all employees and all departments, including unmatched records.
+select employs.id,employs.name,departments.name from employs left join departments on employs.id=departments.id
+ union
+          select employs.id,employs.name,departments.name from employs         right join departments on employs.id=departments.id;
+
+
+11. Show all employees and projects, even if no relation exists.
+employs.id,employs.name,projects.name from employs left join projects on employs.id=projects.id
+ union
+ select employs.id,employs.name,projects.name from employs right join projects on employs.id=projects.id;
+
+
+
+
+
+
+
+CROSS JOIN
+12. Write a query to display all possible combinations of employees and departments.
+Select * from employ cross join departments;
+16 rows in set (0.0011 sec)
+13. Display employee names and project names using CROSS JOIN.
+Select *from employ cross join projects;
+16 rows in set (0.0018 sec)
+14. How many rows will be returned if employee has 5 rows and department has 4 rows? (Explain using CROSS JOIN)
+
+Select * from employ cross join department;
+20 rows in set(0.0021 sec)
+JOIN + CONDITIONS
+18. Write a query to display employees working in the ‘IT’ department.
+
+Select * from employ inner join department on employ.id=department.id where department.name=”IT”;
+19. Display employees whose project name is ‘Banking System’.
+
+
+Select * from employs inner join projects on employs.id=projects.id where projects.name="BankingSystems";
+20. Write a query to list employees without any project.
+Select * from employ left join projects on employ.id=projects.id  where projects.name is null;
+________________
+
+
+21. What happens if you join an INT column with a VARCHAR column?
+Select * from employs as a join employs as e on a.id=e.name;
+22. Why does SQL throw an ambiguous column error in joins?
+ select * from employs inner join departments on id = id;
+
+
+
+23. Can we join tables without primary and foreign keys? Write a query.
+
+
+1)select * from employ inner join departments on employ.id = departments.id;
+2)select * from employ left join departments on employ.id = departments.id;
+3)select * from employ right join departments on employ.id = departmentss.id;
+4)Select *from employ left join departments on employ.id=departmentss.id 
+Union
+Select * from employ right join departments on employ.id=departmentss.id;
+5)Select * from employ cross join departments;
+
+6)Select * from employ as a join employ as e on a.id=e.dept_id;
+
+
+
+
+
+
+
+
+
+24. What is the difference between:
+
+   * JOIN
+
+ Select employs.id,employs.name,departments.name from employs  join departments on employs.id = departments.id;
+
+
+      * JOIN … ON
+
+ Select employs.id,employs.name,departments.name from employs inner join departments on employs.id = departments.id;
+         * CROSS JOIN
+
+
+Select * from employs cross join departments;
+
+
+
+         25. Write a query and explain the difference between INNER JOIN and LEFT JOIN using output.
+ INNER JOIN: Select employs.id,employs.name,departments.name from employs inner join departments on employs.id = departments.id;
+LEFT JOIN: Select employs.id,employs.name,departments.name from employs left join departments on employs.id = departments.id;
